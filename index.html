@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PennyWise Finance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #0b1c30;
+      --muted: #434655;
+      --blue: #004ac6;
+      --blue-soft: #e5eeff;
+      --green: #006c49;
+      --green-soft: #d9f9e8;
+      --gold: #784b00;
+      --gold-soft: #ffedcf;
+      --surface: #f8f9ff;
+      --white: #ffffff;
+      --line: #c3c6d7;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #f8f9ff 0%, #eff4ff 58%, #e5eeff 100%);
+      color: var(--ink);
+      font-family: "Work Sans", sans-serif;
+    }
+
+    main {
+      width: min(1040px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 72px 0 56px;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    h1, h2 { font-family: "Manrope", sans-serif; }
+    h1 {
+      max-width: 700px;
+      margin: 0;
+      font-size: clamp(38px, 7vw, 68px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .intro {
+      max-width: 610px;
+      margin: 20px 0 48px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .link {
+      display: flex;
+      min-height: 170px;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .86);
+      color: inherit;
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+
+    .link:hover, .link:focus-visible {
+      border-color: var(--blue);
+      box-shadow: 0 12px 28px rgba(0, 74, 198, .12);
+      transform: translateY(-3px);
+      outline: none;
+    }
+
+    .number {
+      color: var(--blue);
+      font-family: "Manrope", sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .link h2 {
+      margin: 22px 0 6px;
+      font-size: 24px;
+    }
+
+    .link p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .arrow {
+      align-self: flex-end;
+      color: var(--blue);
+      font-size: 24px;
+    }
+
+    .reference {
+      display: inline-flex;
+      margin-top: 28px;
+      padding: 12px 16px;
+      border-bottom: 2px solid var(--green);
+      color: var(--green);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .reference:hover, .reference:focus-visible { background: var(--green-soft); outline: none; }
+
+    @media (max-width: 640px) {
+      main { width: min(100% - 32px, 520px); padding-top: 48px; }
+      .intro { margin-bottom: 32px; }
+      .links { grid-template-columns: 1fr; }
+      .link { min-height: 140px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">PennyWise Finance</p>
+    <h1>Your money, in balance.</h1>
+    <p class="intro">Open any workspace screen to explore the PennyWise personal finance manager.</p>
+
+    <nav class="links" aria-label="Finance manager screens">
+      <a class="link" href="dashboard_pennywise_finance/code.html">
+        <span class="number">01</span>
+        <span>
+          <h2>Overview</h2>
+          <p>See your financial snapshot and what needs attention.</p>
+        </span>
+        <span class="arrow" aria-hidden="true">&rarr;</span>
+      </a>
+      <a class="link" href="budgets_pennywise_finance/code.html">
+        <span class="number">02</span>
+        <span>
+          <h2>Budgets</h2>
+          <p>Plan spending and track progress across categories.</p>
+        </span>
+        <span class="arrow" aria-hidden="true">&rarr;</span>
+      </a>
+      <a class="link" href="savings_goals_pennywise_finance/code.html">
+        <span class="number">03</span>
+        <span>
+          <h2>Savings Goals</h2>
+          <p>Keep long-term goals visible and moving forward.</p>
+        </span>
+        <span class="arrow" aria-hidden="true">&rarr;</span>
+      </a>
+      <a class="link" href="transactions_pennywise_finance/code.html">
+        <span class="number">04</span>
+        <span>
+          <h2>Transactions</h2>
+          <p>Review your transaction history and recent activity.</p>
+        </span>
+        <span class="arrow" aria-hidden="true">&rarr;</span>
+      </a>
+      <a class="link" href="ai_fund_advisor_pennywise_finance/code.html">
+        <span class="number">05</span>
+        <span>
+          <h2>AI Fund Advisor</h2>
+          <p>Explainable AI fund tracking, SHAP attribution, and recommendations.</p>
+        </span>
+        <span class="arrow" aria-hidden="true">&rarr;</span>
+      </a>
+    </nav>
+
+    <a class="reference" href="equilibrium_finance/DESIGN.md">View design system reference &rarr;</a>
+  </main>
+</body>
+</html>
